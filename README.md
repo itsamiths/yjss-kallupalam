@@ -1,4 +1,4 @@
 yjss-kallupalam
 ===============
 
-Repo of yjsskallupalam.in
+Repo of http://yjsskallupalam.in/
