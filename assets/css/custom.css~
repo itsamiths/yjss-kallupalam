@@ -1,0 +1,10 @@
+@font-face
+{
+font-family: myFirstFont;
+src: url(../fonts/);
+}
+
+body
+{
+font-family:myFirstFont;
+}
