@@ -11,6 +11,8 @@ $(document).ready(function(){
 			}
 		}
 		json_data=feedjson;
+		$("#ajax_loader").hide();
+		$("#page").css("border-right","1px solid #fff");
 		$("#page").append(feedhtml);
 	});
 });

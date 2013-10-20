@@ -22,7 +22,6 @@ p.feedmsg{
 	font-size: 13px;
 	line-height: 1.38;
 	text-align:justify;
-	height:70px;
 }
 .feedbody{
 	margin-left:4px;
