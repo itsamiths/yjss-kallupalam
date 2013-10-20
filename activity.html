@@ -9,8 +9,8 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <!-- Custom CSS -->
     <link href="assets/css/custom.css" rel="stylesheet" media="screen">
-    <!-- Image Slideshow CSS -->
-    <link href="assets/css/img_slideshow.css" rel="stylesheet">
+    <!-- fb page CSS -->
+    <link href="assets/css/fbpage.css" rel="stylesheet" media="screen">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -18,37 +18,39 @@
     <![endif]-->
   </head>
   <body>
-    <ul class="cb-slideshow">
-	<li><span></span></li>
-	<li><span></span></li>
-	<li><span></span></li>
-	<li><span></span></li>
-	<li><span></span></li>
-	<li><span></span></li>
-    </ul>
     <div id="body">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=1421044221443245";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="nav">
 		<ul>
-			<li><a href="index.html" class="selected">Home</a></li>
-			<li><a href="activity.html">Activity</a></li>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="activity.html" class="selected">Activity</a></li>
 			<li><a href="team.html">Meet the Team<a></li>
 			<li><a href="about.html">About Us</a></li>
 		</ul>
 	</div>
-	<div id="content">
-		<h1>YJSS Kallupalam</h1>
-		<h2>What we do?</span></h2>
-		<p>We are Non-Profit Organization which comprises young bloods of kallupalam, mainly aims to transform the society through service to mankind.</p>
-		<br/>
-		<h6>Designed By</h6>
-		<h5><a href="https://www.facebook.com/mkamithkumar" target="_TOP">Amith</a></h5>
+	<div id="fb-content">
+		<div id="page" class="left">
+			
+		</div>
+		<div class="fb-like-box" data-href="https://www.facebook.com/pages/YJSS-Yuvajana-Seva-Sangam-Kallupalam/432128853565990" data-width="400" data-height="600" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 	<div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/js/jquery-1.10.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Get FB Page Feed JS -->
+    <script src="assets/js/getpagefeed.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/custom.js"></script>
+    <!-- Nice Scroll JS -->
+    <script src="assets/js/jquery.nicescroll.min.js"></script>
   </body>
 </html>

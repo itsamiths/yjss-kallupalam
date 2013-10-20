@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../fonts/BebasNeue-webfont.eot');
+    src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 @font-face
 {
 font-family: glyphicons-halflings-regular;
@@ -7,4 +17,93 @@ src: url(../fonts/glyphicons-halflings-regular.woff);
 body
 {
 font-family:glyphicons-halflings-regular;
+background-color:#000;
+}
+#body{
+	z-index: 1000;
+	position: absolute;
+    	width: 100%;
+}
+#nav{
+	height:40px;
+	opacity: 0.8;
+	margin-top: 20px;
+	color:#fff;
+	text-align:center;
+	background: #a11c20;
+	display: block;
+	padding-left: 25%;
+}
+#nav ul li{
+	display:inline;
+	margin: 5px 20px;
+}
+#nav ul li a{
+	color: #e25a5e;
+	text-decoration: none;
+	font-family:glyphicons-halflings-regular;
+	text-shadow: #8b181c 1px -1px 0px;
+	font-weight: bold;
+	font-size:1.4em;
+}
+#nav ul li a.selected {
+	color: #fff;
+}
+#nav ul li a:hover {
+	color: #fff;
+}
+#content{
+	position: relative;
+	max-width: 800px;
+	margin: 0px auto;
+	margin-top: 60px;
+	text-align:center;
+	color:#fff;
+	display: block;
+	padding-left: 25%;
+}
+#content h1{
+	font-family:BebasNeueRegular;
+	font-size: 85px;
+	text-shadow: #8b181c 1px -1px 0px;
+}
+#content h2{
+	font-family:BebasNeueRegular;
+	font-size: 55px;
+}
+#content p{
+	font-family:glyphicons-halflings-regular;
+	font-size:2.0em;
+}
+#content h6{
+	font-family:glyphicons-halflings-regular;
+	font-size:1.3em;
+}
+#content h5 a{
+	color: #fff;
+	text-decoration:underline;
+	font-size:1.2em;
+}
+#content h5 a:hover {
+	color:#E25A29;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+#fb-content{
+	margin-top:10px;
+}
+#page{
+	color:#fff;
+	overflow-x:hidden !important;
+	overflow-y:scroll;
+	height: 600px;
+	width:740px;
+	margin-left:60px;
+}
+.clearfix{
+	clear:both;
 }
