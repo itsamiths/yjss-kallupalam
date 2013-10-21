@@ -2,7 +2,7 @@ div.pvs{
 	display:none;
 }
 .newsfeed{
-	font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
+	font-family: 'Lato',sans-serif;
 	border-bottom: 1px dotted gray; 
 	padding: 15px 0 15px 0;
 	width: 100%;
@@ -13,6 +13,7 @@ div.pvs{
 	height:90px;
 }
 p.feedpostedby{
+	color:#000;
 	font-weight:bold;
 	font-size: 13px;
 	line-height: 1.28;
@@ -23,22 +24,23 @@ p.feedmsg{
 	line-height: 1.38;
 	text-align:justify;
 	height:70px;
+	overflow: hidden;
 }
 .feedbody{
 	margin-left:4px;
 	height:auto;
-	width:80%;
+	width:75%;
 }
 p.likes{
 	font-size:11px;
 	text-align:bottom;
-	color:gray;
+	color:#3b66a0;
 }
 span.likecount{
-	color:#fff;
+	color:#000;
 }
 span.right a{
-	color:gray;
+	color:#3b66a0;
 	text-decoration:underline
 }
 span.right a:hover{

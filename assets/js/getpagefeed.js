@@ -7,12 +7,13 @@ $(document).ready(function(){
 			if(feedjson.data[i].type == "photo" && feedjson.data[i].message !=null){
 				feedhtml=feedhtml+"<div class='newsfeed clearfix'><div class='feedimg left'><img src='"+feedjson.data[i].picture+"' width='130px' height='97px'/></div><div class='left feedbody'><p class='feedpostedby'>"+feedjson.data[i].from.name+"<p><p class='feedmsg'>"+feedjson.data[i].message+"</p><p class='likes'><span class='likecount'>"+feedjson.data[i].likes.data.length+"&nbsp;</span>like this<span class='right'><a href='"+feedjson.data[i].link+"' target='_TOP'>View on Facebook</a></span></p></div></div>";
 			}
-			else{
+			else if((feedjson.data[i].type == "status" || feedjson.data[i].type == "link") && feedjson.data[i].message !=null){
+				feedhtml=feedhtml+"<div class='newsfeed clearfix'><div><p class='feedpostedby'>"+feedjson.data[i].from.name+"<p><p class='feedmsg'>"+feedjson.data[i].message+"</p><p class='likes'><span class='likecount'>"+feedjson.data[i].likes.data.length+"&nbsp;</span>like this<span class='right'><a href='"+feedjson.data[i].link+"' target='_TOP'>View on Facebook</a></span></p></div></div>";
 			}
 		}
 		json_data=feedjson;
 		$("#ajax_loader").hide();
-		$("#page").css("border-right","1px solid #fff");
+		$("#page").css("border-right","1px solid #d8dfea");
 		$("#page").append(feedhtml);
 	});
 });

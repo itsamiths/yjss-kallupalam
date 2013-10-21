@@ -3,7 +3,9 @@
   <head>
     <title>YJSS-Kallupalam</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Reset -->
+	<!-- Lato Font -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <!-- Reset CSS -->
     <link href="assets/css/reset.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="assets/css/custom.css" rel="stylesheet" media="screen">
@@ -17,24 +19,26 @@
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1&appId=1421044221443245";
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1421044221443245";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="nav">
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="activity.html" class="selected">Activity</a></li>
-			<li><a href="team.html">Meet the Team<a></li>
+			<li><a href="team.html">Our Team<a></li>
 			<li><a href="about.html">About Us</a></li>
 		</ul>
 	</div>
-	<div id="fb-content">
+	<div class="main-content">
 		<div id="page" class="left">
 			<div id="ajax_loader"  style="width:70%;margin:200px;">
 				<img src="assets/img/spinner.gif"/>
+			</div>
 		</div>
+		<div class="fblikecontainer">
+			<div  class="fb-like-box" data-href="https://www.facebook.com/pages/YJSS-Yuvajana-Seva-Sangam-Kallupalam/432128853565990" data-width="400" data-height="600" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 		</div>
-		<div class="fb-like-box" data-href="https://www.facebook.com/pages/YJSS-Yuvajana-Seva-Sangam-Kallupalam/432128853565990" data-width="400" data-height="600" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
 	<div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
