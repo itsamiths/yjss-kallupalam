@@ -1,0 +1,16 @@
+Sitemap: http://yjsskallupalam.in/sitemap.xml?redirect=false&start-index=1&max-results=500
+
+User-agent:  *
+Allow:/
+
+User-agent: Mediapartners-Google*
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Adsbot-Google
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
