@@ -37,7 +37,16 @@
 			</ul>
 		</div>
 		<div id="block-main">
-			<div class="content">				
+			<div class="content">	
+				<section id="success-msg" style="display:none">
+					<form   class="formoid-metro-cyan" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px" method="post" autocomplete="off">
+						<div class="title">
+							<h2>Success</h2>
+							<hr />
+							<h2>Thank you for your time. Your response is recorded</h2>
+						</div>
+					</form>
+				</section>
 				<section id="main-b">
 					<!-- Start Formoid form-->
 					<form id="register" name="register" class="formoid-metro-cyan" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px" method="post" autocomplete="off">
@@ -95,17 +104,9 @@
 					</form>
 	<!-- End Formoid form-->
 				</section>
-				<section id="success-msg" style="display:none">
-					<form   class="formoid-metro-cyan" style="background-color:#FFFFFF;font-size:14px;font-family:'Open Sans','Helvetica Neue','Helvetica',Arial,Verdana,sans-serif;color:#666666;max-width:480px;min-width:150px" method="post" autocomplete="off">
-						<div class="title">
-							<h2>Success</h2>
-							<hr />
-							<h2>Thank you for your time. Your response is recorded</h2>
-						</div>
-					</form>
-				</section>
 			</div>
 		</div>	
+		<div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src='assets/img/demo_wait.gif' width="64" height="64" /><br>Loading..</div>
   </body>
   	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/form/formoid-metro-cyan.js"></script>
@@ -114,6 +115,12 @@
 		$(document).ready(function(){
 			// variable to hold request
 			var request;
+			$( document ).ajaxStart(function() {
+			  $( "#wait" ).show();
+			});
+			$(document).ajaxComplete(function(){
+				$("#wait").hide();
+			});
 			// bind to the submit event of our form
 			$("#register").submit(function(event){
 				var has_empty = false;
