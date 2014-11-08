@@ -8,11 +8,18 @@ $(function() {
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
 			if($form.attr('id') == "contactForm"){
+				
+				$("#contactForm").css('opacity','0.5');
+				
 				// get values from FORM
 				var name = $("input#name").val();
 				var email = $("input#email").val();
 				var phone = $("input#phone").val();
 				var message = $("textarea#message").val();
+				
+				// disable form fields
+				$( "#contactForm" ).find('input, textarea, button, select').attr('disabled',true);
+				
 				var firstName = name; // For Success/Failure Message
 				// Check for white space in name for Success/Fail message
 				if (firstName.indexOf(' ') >= 0) {
@@ -48,6 +55,9 @@ $(function() {
 
 						//clear all fields
 						$('#contactForm').trigger("reset");
+						
+						$( "#contactForm" ).find('input, textarea, button, select').attr('disabled',false);
+						$("#contactForm").css('opacity','1');
 					},
 					error: function() {
 						// Fail message
@@ -58,6 +68,9 @@ $(function() {
 						$('#success > .alert-danger').append('</div>');
 						//clear all fields
 						$('#contactForm').trigger("reset");
+						
+						$( "#contactForm" ).find('input, textarea, button, select').attr('disabled',false);
+						$("#contactForm").css('opacity','1');
 					},
 				});
 			}
